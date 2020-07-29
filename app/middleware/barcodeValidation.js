@@ -22,10 +22,10 @@ const calcDV = (barcode) => {
   const sum = multi.reduce((sum, value) => sum + value);
   const res = 11 - (sum % 11);
 
-  console.log();
+  if (res === 0 || res === 10 || res === 11) res = 1;
+
   return parseInt(dv[0]) === res;
 };
-
 
 // Função que retorna sempre o número entre 2 e 9 correspondente a posição do digito recebido.
 const multiplier = (num) => {
