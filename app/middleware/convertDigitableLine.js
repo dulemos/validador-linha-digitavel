@@ -3,8 +3,6 @@
 // CÓDIGO DE BARRAS = 00193373700000001000500940144816060680935031
 
 const convertDigitableLine = ({ digitableLine }) => {
-  //   const digitableLineArr = digitableLine.split('');
-  //   console.log(digitableLineArr)
   const financialInstitution = digitableLine.substr(0, 3);
   const currency = digitableLine.substr(3, 1);
   const c = digitableLine.substr(4, 5);
