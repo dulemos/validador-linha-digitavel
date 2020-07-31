@@ -1,8 +1,10 @@
 const digitableLine = (barcode, res) => {
-  // const value = getDocumentValue(barcode);
-  // const dueDate = getDocumentDueDate(barcode);
-  // console.log(dueDate)
-  res.status("201").send({ barcode: barcode});
+  res.status(201).send({ 
+    isDigitableLineValid: true, 
+    documentValue: getDocumentValue(barcode),
+    dueDate: getDocumentDueDate(barcode),
+    barcode: barcode  
+  });
 };
 
 const getDocumentValue = (barcode) => {
